@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /products.html
+Allow: /product-details.html
+Disallow: /admin/
+Disallow: /data/
+Disallow: /ai/
+
+Sitemap: https://taj-studio.vercel.app/api/sitemap.xml

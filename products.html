@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Luxury Decor & Organizers | Taj Sons</title>
+    <meta name="description"
+        content="Browse our exclusive collection of luxury home decor, premium organizers, and elegant wall mirrors. Find the perfect addition to your home at Taj Sons.">
+    <meta name="keywords"
+        content="luxury shop, home decor online, premium organizers Pakistan, wall mirrors, Taj Sons shop">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taj-studio.vercel.app/products.html">
+    <meta property="og:title" content="Shop Luxury Decor & Organizers | Taj Sons">
+    <meta property="og:description"
+        content="Discover premium essentials for your home. Shop the Taj Sons collection.">
+    <meta property="og:image" content="https://taj-studio.vercel.app/Products/hero-bg.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">Taj <span>Sons</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html" style="color: var(--accent-color);">Shop</a>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">All Products</h2>
+
+        <div class="filters" style="margin-bottom: 2rem; text-align: center;">
+            <input type="text" id="search-input" placeholder="Search products..."
+                style="padding: 0.8rem; width: 100%; max-width: 400px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+
+        <div id="product-list" class="product-grid">
+            <div class="loading">Loading products...</div>
+        </div>
+    </div>
+
+    <div id="chat-widget-container"></div>
+    <div id="toast"></div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script src="ai/gemini-assistant.js"></script>
+</body>
+
+</html>

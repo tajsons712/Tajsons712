@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Taj Sons</title>
+    <meta name="description"
+        content="View product details, pricing, and high-quality images of our premium home decor collection at Taj Sons.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" id="og-title" content="Product Details | Taj Sons">
+    <meta property="og:description" id="og-desc" content="Premium decor item from Taj Sons.">
+    <meta property="og:image" id="og-image" content="https://taj-studio.vercel.app/Products/hero-bg.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">Taj <span>Sons</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" style="padding-top: 2rem;">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs" style="color: #888; margin-bottom: 2rem; font-size: 0.9rem;">
+            <a href="index.html">Home</a> <span style="margin: 0 5px;">/</span>
+            <a href="products.html">Shop</a> <span style="margin: 0 5px;">/</span>
+            <span id="breadcrumb-name" style="color: var(--accent-color);">Loading...</span>
+        </div>
+
+        <div id="product-detail-container" class="product-detail-grid" style="display:none;">
+            <!-- Left: Gallery -->
+            <div class="product-gallery-section">
+                <div class="detail-image-wrapper">
+                    <img id="detail-image" src="" alt="Product Image" class="detail-image">
+                </div>
+                <!-- Thumbnails will be injected here by app.js -->
+            </div>
+
+            <!-- Right: Info -->
+            <div class="detail-info">
+                <span id="detail-category" class="product-category" style="font-size: 0.9rem;">CATEGORY</span>
+                <h1 id="detail-name" style="font-size: 2.5rem; margin: 0.5rem 0 1rem; line-height: 1.2;">Product Name
+                </h1>
+                <p id="detail-price" class="product-price" style="font-size: 2rem; margin-bottom: 2rem;">Rs. 0</p>
+
+                <div id="detail-actions" style="margin-bottom: 2rem; display:flex; gap: 15px;">
+                    <!-- Actions injected via JS -->
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 2rem;">
+
+                <h3 style="color: #fff; margin-bottom: 1rem;">Description</h3>
+                <p id="detail-desc" style="color: #ccc; line-height: 1.8; font-size: 1.05rem;">
+                    Product description will appear here.
+                </p>
+
+                <div class="trust-strip" style="margin-top: 3rem; background: transparent; padding: 0;">
+                    <div class="trust-grid" style="justify-content: flex-start; gap: 3rem;">
+                        <div class="trust-item"><i class="fas fa-truck"></i> Fast Delivery</div>
+                        <div class="trust-item"><i class="fas fa-shield-alt"></i> Premium Quality</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" style="text-align: center; padding: 5rem;">
+            <i class="fas fa-circle-notch fa-spin" style="font-size: 2rem; color: var(--accent-color);"></i>
+        </div>
+
+        <div id="error-msg" style="text-align: center; padding: 5rem; display: none; color: #ff4757;">
+            <h2>Product Not Found</h2>
+            <a href="products.html" class="btn" style="margin-top: 1rem; display: inline-block;">Back to Shop</a>
+        </div>
+    </div>
+
+    <div id="chat-widget-container"></div>
+    <div id="toast"></div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Taj Sons</h4>
+                <p>Elevating your lifestyle with premium essentials.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="products.html">All Products</a>
+                <a href="cart.html">View Cart</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="policy.html">Privacy Policy</a>
+                <a href="#" onclick="alert('Contact us on WhatsApp!')">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Taj Sons. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script src="ai/gemini-assistant.js"></script>
+    <script>
+        // Inline logic for extracting ID and initiating load
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            if (id) {
+                // app.js will have a function to load details
+                if (window.loadProductDetails) window.loadProductDetails(id);
+            } else {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error-msg').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

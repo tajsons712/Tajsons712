@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Sons | Premium Home Organizers & Luxury Decor</title>
+    <meta name="description"
+        content="Elevate your space with Taj Sons. Discover premium home organizers, luxury wall clocks, and elegant decor designed for the modern lifestyle. Fast delivery across Pakistan.">
+    <meta name="keywords" content="home decor, organizers, luxury clocks, wall mirrors, Taj Sons, premium lifestyle">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taj-studio.vercel.app/">
+    <meta property="og:title" content="Taj Sons | Premium Home Organizers & Luxury Decor">
+    <meta property="og:description"
+        content="Elevate your space with Taj Sons. Discover premium home organizers and luxury decor.">
+    <meta property="og:image" content="https://taj-studio.vercel.app/Products/hero-bg.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://taj-studio.vercel.app/">
+    <meta property="twitter:title" content="Taj Sons | Premium Home Organizers & Luxury Decor">
+    <meta property="twitter:description"
+        content="Elevate your space with Taj Sons. Discover premium home organizers and luxury decor.">
+    <meta property="twitter:image" content="https://taj-studio.vercel.app/Products/hero-bg.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID_HERE'); // Replace with your actual Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">Taj <span>Sons</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Space</h1>
+            <p>Premium Home Organizers & Storage Solutions</p>
+            <br>
+            <a href="products.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Featured Collection</h2>
+        <div id="featured-products" class="product-grid">
+            <!-- Products will load here dynamically -->
+            <div class="loading">Loading products...</div>
+        </div>
+    </section>
+
+    <div id="chat-widget-container"></div>
+
+    <section class="container features-section" style="margin: 6rem auto;">
+        <h2 class="section-title">Why Choose Taj Sons</h2>
+        <div class="product-grid" style="text-align: center;">
+            <div class="feature-card"
+                style="padding: 2rem; background: var(--glass-bg); border-radius: 16px; border: 1px solid var(--glass-border);">
+                <i class="fas fa-truck" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 style="color: #fff; margin-bottom: 0.5rem;">Fast Shipping</h3>
+                <p style="color: #aaa;">Reliable delivery across Pakistan within 3-5 days.</p>
+            </div>
+            <div class="feature-card"
+                style="padding: 2rem; background: var(--glass-bg); border-radius: 16px; border: 1px solid var(--glass-border);">
+                <i class="fas fa-gem" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 style="color: #fff; margin-bottom: 0.5rem;">Premium Quality</h3>
+                <p style="color: #aaa;">Hand-picked luxury materials for your home.</p>
+            </div>
+            <div class="feature-card"
+                style="padding: 2rem; background: var(--glass-bg); border-radius: 16px; border: 1px solid var(--glass-border);">
+                <i class="fas fa-headset"
+                    style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 style="color: #fff; margin-bottom: 0.5rem;">24/7 Support</h3>
+                <p style="color: #aaa;">Our AI & Team are always here to conduct you.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">Taj <span>Sons</span></a>
+                <p style="margin-top: 1rem;">Elevating your living space with premium organization solutions. Designed
+                    for luxury, built for life.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop Collection</a>
+                <a href="cart.html">My Cart</a>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <a href="policy.html">Shipping Policy</a>
+                <a href="policy.html">Returns & Exchanges</a>
+                <a href="policy.html">Terms of Service</a>
+                <a href="policy.html">FAQs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p>Faisalabad, Pakistan</p>
+                <div class="social-links">
+                    <a href="#" style="display:inline; margin-right:10px;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="display:inline; margin-right:10px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="display:inline; margin-right:10px;"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Trust Badges Section -->
+        <div class="trust-strip">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Secure Checkout</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-undo"></i>
+                    <span>7-Day Easy Returns</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-star"></i>
+                    <span>Premium Quality Guaranteed</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Taj Sons. All rights reserved.</p>
+            <p>Premium Quality | Fast Delivery | Satisfaction Guaranteed</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Toast Container -->
+    <div id="toast" class="toast">Added to Cart Successfully!</div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script src="ai/gemini-assistant.js"></script>
+</body>
+
+</html>
