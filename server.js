@@ -718,7 +718,11 @@ app.get('/sitemap.xml', async (req, res) => {
     }
 });
 
-// Start Server
+// Star
+// Explicit root route for Vercel
+app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname, 'index.html'));
+});t Server
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
     console.log(`Open http://localhost:${PORT} to view the website`);
