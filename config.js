@@ -1,12 +1,1 @@
-const CONFIG = {
-    storeName: "Taj Sons",
-    currency: "PKR",
-    whatsappNumber: "923078265535", // Updated temporary number
-    geminiApiKey: "AIzaSyDx3XXHeM8_PSjDNzrFKR5Uw3NNqsdirRo", // Invalid Key - waiting for update
-    pixelId: "",
-    socialLinks: {
-        facebook: "https://facebook.com",
-        instagram: "https://instagram.com"
-    },
-    useLocalAI: true // Reverted to Local AI (Llama 3.2)
-};
+const CONFIG = { storeName: "Taj Sons", currency: "PKR", whatsappNumber: "923078265535", // Updated temporary number geminiApiKey: "AIzaSyDx3XXHeM8_PSjDNzrFKR5Uw3NNqsdirRo", // Invalid Key - waiting for update pixelId: "", socialLinks: { facebook: "https://www.facebook.com/profile.php?id=61585957869829", instagram: "https://instagram.com" }, useLocalAI: true // Reverted to Local AI (Llama 3.2) };
